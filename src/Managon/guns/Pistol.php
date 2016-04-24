@@ -8,7 +8,8 @@ class Pistol extends BaseGun{
 
 	public $speed = 0.8;
 	public $bullets = 6;
-    public $max = 48;
+	public $bu = 6;
+        public $max = 48;
 	public $user;
 
 	public function __construct($speed = 0.8,$bullets = 6);
@@ -23,8 +24,9 @@ class Pistol extends BaseGun{
     	if($this->bullets === 0) $this->reload($this->getUser());
     }
 
-    public function reload($name){
-        parent::reload($name);
+    public function reload(){
+        $this->bullets = $this->bu;
+        $this->max -= $this->bu;
     }
 
     public function getName(){
