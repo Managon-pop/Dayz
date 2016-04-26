@@ -35,7 +35,7 @@ class Message extends PluginBase{
 
     	    $quitMessage = $messages["quit"];
 
-    	    $player->sendMessage($name.$quiMessage);
+    	    $player->sendMessage($name.$quitMessage);
         }
     	
     }
